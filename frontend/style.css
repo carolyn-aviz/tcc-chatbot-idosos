@@ -1,0 +1,170 @@
+/* --- Reset e Configurações Globais --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* --- Fundo com a Imagem da Praia e Centralização --- */
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('fundo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* --- Caixa Principal do Chat --- */
+.chat-box {
+  width: 420px;
+  height: 580px;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid #da291c;
+}
+
+/* --- Cabeçalho do Chat --- */
+.chat-header {
+  background: #da291c;
+  color: #ffffff;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 14px; /* Maior espaçamento entre o logo e o título */
+}
+
+/* --- Linha divisória discreta opcional para separar o logo do título --- */
+.header-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* --- Logotipo da Claro --- */
+.chat-logo {
+  height: 26px;
+  width: auto;
+  max-width: 80px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.chat-header h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* --- Indicador de Status (Bolinha) --- */
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+
+/* Cores da bolinha de status */
+.status-dot.online {
+  background-color: #2ecc71; /* Verde vivo para online */
+}
+
+.status-dot.offline {
+  background-color: #333333; /* Preto/Cinza escuro para offline */
+}
+
+/* --- Corpo das Mensagens --- */
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fdfdfd;
+}
+
+/* --- Balões de Mensagem (Acessíveis para Idosos) --- */
+.msg {
+  max-width: 85%;
+  padding: 14px 18px;
+  border-radius: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  font-weight: 500;
+}
+
+.msg.bot {
+  background: #f1f3f4;
+  color: #111111;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+  border: 1px solid #dcdcdc;
+}
+
+.msg.user {
+  background: #da291c;
+  color: #ffffff;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+  font-weight: 600;
+}
+
+/* --- Área de Envio (Alinhada na base do chat) --- */
+.chat-input-area {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: #ffffff;
+  border-top: 2px solid #e0e0e0;
+  gap: 10px;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #757575;
+  border-radius: 12px;
+  outline: none;
+  font-size: 16px;
+  color: #000000;
+  background: #ffffff;
+}
+
+.chat-input-area input:focus {
+  border-color: #da291c;
+  box-shadow: 0 0 6px rgba(218, 41, 28, 0.4);
+}
+
+.chat-input-area button {
+  padding: 12px 20px;
+  background: #da291c;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  white-space: nowrap;
+}
+
+.chat-input-area button:hover {
+  background: #b51f15;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistente Motunui - Claro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Caixa Principal do Chat -->
+  <div class="chat-box">
+    
+    <!-- Cabeçalho -->
+    <div class="chat-header">
+      <div class="header-info">
+        <img src="Claro.png" alt="Claro" class="chat-logo">
+        <div class="header-divider"></div>
+        <h2>Assistente Motunui</h2>
+      </div>
+      <!-- Indicador de status em bolinha (online) -->
+      <span class="status-dot online" title="Online"></span>
+    </div>
+
+    <!-- Corpo das Mensagens -->
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg bot">
+        Olá! Seja bem-vindo(a) ao projeto Motunui. Como posso ajudar você hoje?
+      </div>
+    </div>
+
+    <!-- Área de Envio (Corrigida e Alinhada) -->
+    <div class="chat-input-area">
+      <input type="text" id="userInput" placeholder="Digite sua mensagem aqui...">
+      <button id="sendBtn">Enviar</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
